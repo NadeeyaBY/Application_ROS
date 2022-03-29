@@ -1,0 +1,10 @@
+<launch>
+  <arg name="cmd_vel" default="/cmd_vel"/>
+  <arg name="name" default="p3dx"/>
+
+  <param name="cmd_vel_topic_name" value="$(arg cmd_vel)"/>
+  
+  <node name="$(arg name)_drive" pkg="p3dx_navigation" type="p3dx_drive" required="true" output="screen"/>
+
+
+</launch>
